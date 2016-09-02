@@ -1,0 +1,11 @@
+data.tsv
+
+This file contains every tweet as string ; every tweet as array (This is important since e.g. :)LoL are two words not one!) ; and for every word which language this is.
+
+This file was created using "readTweets.py" Important: change filenames!!!
+
+
+
+tweetsStringData.tsv
+some Tweets are invalid. Those got deleted using fixoutOffeset.py
+
