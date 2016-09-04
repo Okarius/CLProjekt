@@ -4,7 +4,6 @@ import sys
 reload(sys)  # Reload does the trick!
 sys.setdefaultencoding('utf-8')
     
-
 #ReadAllFiles
 tweets = pd.read_csv('../../data.tsv', sep='\t', encoding='utf-8')
 f = open("../unigramsWordLevel.txt","r")
@@ -39,7 +38,7 @@ wordList.remove("")
 def findLanguage(word):
     for i in range(len(tweetsArray)):
         if word in tweetsArray[i]: 
-            print str(tweetsArray[i]) + " " + str(len(tweetsArray[i]))
+          #  print str(tweetsArray[i]) + " " + str(len(tweetsArray[i]))
             return languageArray[i][tweetsArray[i].index(word)]
     return 1
 
