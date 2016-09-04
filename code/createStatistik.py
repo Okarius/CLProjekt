@@ -15,7 +15,7 @@ def elementToArray(element):
 
 table = pd.read_csv("data/data.tsv", sep='\t')
 languages = [i.split(" ") for i in table["taggedLanguages"]]
-languages = [i for i in languages if len(i)> 3]
+languages = [i for i in languages if len(i)> 4]
 surrounding = []
 
 for l in languages:
@@ -29,18 +29,41 @@ for l in languages:
 
 countChangedWhileSurrounded = 0
 notChangedWhileSurroundend = 0
+countAll = 0
 for i in surrounding:
-    print i
     if i[0] == i[2]:
+        countAll = countAll+1
         if i[0] != i[1]:
             countChangedWhileSurrounded = countChangedWhileSurrounded+1
         if i[0] == i[1]:
             notChangedWhileSurroundend = notChangedWhileSurroundend +1
             
-print (float(countChangedWhileSurrounded) /len(surrounding))
-            
+print (float(countChangedWhileSurrounded) /countAll)
+print (float(notChangedWhileSurroundend) /countAll)
 
-print (float(notChangedWhileSurroundend) /len(surrounding))
 
+
+
+surrounding = []
+languages = [i.split(" ") for i in table["taggedLanguages"]]
+languages = [i for i in languages if len(i)> 4]
+for l in languages:
+    l.remove("")
+    newList= []
+    newList = [l[len(l)-1],l[len(l)-2],l[len(l)-3]]
+    if not "" in newList:
+        surrounding.append(newList)
+
+
+countChangedAtEnd = 0
+countNotChangedAtEnd = 0
+for i in surrounding:
+    if i[0] == i[1]and i[0] == i[2]:
+        countChangedAtEnd = countChangedAtEnd+1
+    else:        
+        countNotChangedAtEnd = countNotChangedAtEnd +1
+print ("changed at end")
+print (float(countChangedAtEnd) /len(surrounding))
+print (float(countNotChangedAtEnd) /len(surrounding))
 
 

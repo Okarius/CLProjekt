@@ -1,7 +1,5 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# -*- encoding: utf-8 -*-
-
 from nltk import tokenize
 import pandas as pd
 import re
@@ -12,24 +10,9 @@ import threading
 import sys
 reload(sys)  # Reload does the trick!
 sys.setdefaultencoding('UTF8')
-outFile = "trial.tsv"
-tweetStringFile = 'Provided/trialTweets.tsv'
-tweetOffsetFile = 'Provided/trialDataEnEswithOffsets.tsv'
-isTrainingsFile= False
-if isTrainingsFile:
-    f = open(tweetOffsetFile, "r")
-    lines = f.readlines()
-    if "PLACEHOLDER" not in lines[3]:
-        for i in range(1,(len(lines))):
-            lines[i] = lines[i].replace("\n","")
-            lines[i] = lines[i]+"\tPLACEHOLDER\n"
-            lines[i] = lines[i].replace("\t\t","\t")
-
-        f.close()
-        f = open(tweetOffsetFile, "w")
-        for l in lines:
-            f.write(l)
-        f.close()
+outFile = "test.tsv"
+tweetStringFile = 'Provided/testTweets.tsv'
+tweetOffsetFile = 'Provided/en_es_test_data.tsv'
 class TaggedTweet:
 #A taggedTweet contains the tweet, an array with every word, and the correspondingg labels, the TweetID
 #Most Important feature: Word-Label list through self.labels and self.words  labels[i] labels word[i]
@@ -60,22 +43,18 @@ class TaggedTweet:
         if (" " in self.words):
             self.badEntry = True #if this is the case, dont use this tweet
     
-tweets = pd.read_csv(tweetStringFile, sep='\t', encoding='utf-8')
-tweetInfo = pd.read_csv(tweetOffsetFile, sep='\t', encoding='utf-8')
-
-
-
-tweets =  tweets[pd.isnull(tweets["tweet"]) == False]       
-tweets =  tweets[tweets["tweet"] != "Not Found"]
-tweets.to_csv("tweetsStringData.tsv", sep='\t')
-tweets =  pd.read_csv("tweetsStringData.tsv", sep='\t', encoding='utf-8')
-tweetStrings = []
-
-
+tweets = pd.read_csv('tweetsStringData.tsv', sep='\t', encoding='utf-8')
+tweetInfo = pd.read_csv('Provided/en_es_training_offsets.tsv', sep='\t', encoding='utf-8')
+#tweets = pd.read_csv('tweets.tsv', sep='\t', encoding='utf-8')
+#tweetInfo = pd.read_csv('idizesLang.tsv', sep='\t', encoding='utf-8')
+tweetStrings = []#tweets['tweet']
+#tweetStrings =  [ x for x in tweetStrings if "Not Found" not in str(x).encode("utf-8")]
+#tweetStartStopArray will contain:
 #A list. Each element will contain a list of rows corresponding to a tweet id.
 #Goal is a list for every tweetId (with its row-content in the off-set data)
 tweetStartStopArray = []
-
+#savecount = 0
+#startCopy = False
 lastStop = 0
 def getAllTweetInfos(tweetId,q):
     tweetIDInfo = []
@@ -92,6 +71,7 @@ def getAllTweetInfos(tweetId,q):
             break
             
     q.put(tweetIDInfo)
+    #return tweetIDInfo            
    
 
 for i in range(len(tweets)):
@@ -99,10 +79,17 @@ for i in range(len(tweets)):
     tweet = str(tweets["tweet"][i]).encode("utf-8")
     tweetId = tweets["tweetId"][i]
     tweetStrings.append(tweet)
-    q = Queue.Queue()
+    q = Queue.Queue()outFile = "test.tsv"
     threading.Thread(target=getAllTweetInfos, args=(tweetId, q)).start()
     result = q.get()
     tweetStartStopArray.append(result)
+    #           startCopy = True
+    #        if startCopy and tweetId != tweetInfo["tweetId"][j]:
+    #            savecount = j
+    #            startCopy = False
+    #            break
+       # tweetStartStopArray.append(async_result.get())
+
 
 
 
@@ -119,7 +106,7 @@ for i in range(len(tweetStartStopArray)):
 #Tweets to TSV
 #id;tweetString;tweetWordArray;taggedLanguages
 #1 english, 2 spanish, 0 other
-f = open(outFile,"w")
+f = open("data.tsv","w")
 f.write("id\ttweetString\ttweetWordArray\ttaggedLanguages\n")
 iD = 0
 for t in allTaggedTweets:

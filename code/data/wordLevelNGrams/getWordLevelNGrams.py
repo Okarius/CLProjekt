@@ -6,7 +6,7 @@ sys.setdefaultencoding('utf-8')
 #since there are a lot of funny special characters
 #i just tapped them in the file i needed them to prevent coding errors
 
-tweets = pd.read_csv('../outOffset.tsv', sep='\t', encoding='utf-8')
+tweets = pd.read_csv('../trainingsTweets.tsv', sep='\t', encoding='utf-8')
 tweetStrings = []
 unigrams = set()
 for i in range(len(tweets)):
