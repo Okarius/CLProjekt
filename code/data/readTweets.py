@@ -16,6 +16,17 @@ outFile = "trial.tsv"
 tweetStringFile = 'Provided/trialTweets.tsv'
 tweetOffsetFile = 'Provided/trialDataEnEswithOffsets.tsv'
 isTrainingsFile= False
+
+#++++++++++++++ Check if Tables look like like they have to look like +++++++++++++
+
+#Used to add the first line to the tables.
+def prepend_text(filename, text, after=None):
+    f_read = open(filename, 'r')
+    buff = f_read.read()
+    f_read.close()
+    f_write = open(filename, 'w')
+    f_write.write(text+buff)
+    f_write.close()
 if isTrainingsFile:
     f = open(tweetOffsetFile, "r")
     lines = f.readlines()
@@ -30,6 +41,15 @@ if isTrainingsFile:
         for l in lines:
             f.write(l)
         f.close()
+with open(tweetStringFile, 'r') as f:
+    first_line = f.readline()
+    if "userId" not in first_line:
+        prepend_text(tweetStringFile, "tweetId\tuserId\ttweet\n")
+with open(tweetOffsetFile, 'r') as f:
+    first_line = f.readline()
+    if "userId" not in first_line:
+        prepend_text(tweetOffsetFile, "tweetId\tuserId\tstart\tend\tlabel\n")
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class TaggedTweet:
 #A taggedTweet contains the tweet, an array with every word, and the correspondingg labels, the TweetID
 #Most Important feature: Word-Label list through self.labels and self.words  labels[i] labels word[i]
