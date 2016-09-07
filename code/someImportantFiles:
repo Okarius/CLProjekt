@@ -1,0 +1,3 @@
+/data/tsv. are tweets, tweet aray and labels
+/data/wordLevelNGrams contain which wordlevel NGrams Exists
+/data/wordLevelNGrams/nGramTables/ are the table which contains which nGram is in which word. DIESE TABELLE MUSS NEU ERZEUGT WERDEN einfach python script ausführen, (war über 300mb groß)
