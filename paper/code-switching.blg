@@ -1,0 +1,37 @@
+This is 8-bit Big BibTeX version 0.99d
+Implementation:  C for Unix
+Release version: 3.71 (18 mar 2013)
+
+The 8-bit codepage and sorting file: 88591lat.csf
+The top-level auxiliary file: code-switching.aux
+The style file: acl.bst
+Reallocated glb_str_ptr (elt_size=8) to 10 items from 0.
+Reallocated global_strs (elt_size=20001) to 10 items from 0.
+Reallocated glb_str_end (elt_size=8) to 10 items from 0.
+Database file #1: sources.bib
+Warning--to sort, need author or key in workshop
+Too many commas in name 1 of "Nathaniel Oco, Jason Wong, Joel Ilao, Rachel Roxas" for entry bigramFrequencyCount
+while executing---line 1245 of file acl.bst
+Too many commas in name 1 of "Nathaniel Oco, Jason Wong, Joel Ilao, Rachel Roxas" for entry bigramFrequencyCount
+while executing---line 1245 of file acl.bst
+`year' is a missing field, not a string, for entry multipleLanguages
+while executing---line 1314 of file acl.bst
+Warning--empty year in multipleLanguages
+Warning--empty journal in multipleLanguages
+Too many commas in name 1 of "Nathaniel Oco, Jason Wong, Joel Ilao, Rachel Roxas" for entry bigramFrequencyCount
+while executing---line 1314 of file acl.bst
+Warning--empty journal in bigramFrequencyCount
+Warning--empty author in workshop
+`year' is a missing field, not a string, for entry workshop
+while executing---line 1314 of file acl.bst
+Warning--empty year in workshop
+Warning--empty journal in workshop
+
+Here's how much of BibTeX's memory you used:
+ Cites:                 4 out of 750
+ Fields:               35 out of 5000
+ Hash table:        35129 out of 35307
+ Strings:             568 out of 35307
+ Free string pool:   5018 out of 65000
+ Wizard functions:   2490 out of 3000
+(There were 5 error messages)
