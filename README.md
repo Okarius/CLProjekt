@@ -24,7 +24,7 @@ After downloading the ofset file and the actual tweets, use our script `read_twe
 * `isTrainingsFile` -> True/False
 * `outFile` -> output file 
 
-If needed coloumns are ennumerated. The script will delete lots of tweets as they could not be found, were empty, or modified (string is shorter/longer than deffined by the offset file) in the time between annotation and feetching. 
+If needed coloumns are ennumerated. The `fixout_offeset.py` script will delete lots of tweets as they could not be found, were empty, or modified (string is shorter/longer than deffined by the offset file) in the time between annotation and feetching. 
 
 The remaining tweets are processed, resulting in an ouput tsv file with the following columns: `TweetString`, `TweetArray`, and `Languages`:
 * `TweetString`: the tweet as normal string
