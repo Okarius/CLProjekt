@@ -75,13 +75,12 @@ def predictWords(lr, words, bigrams):
 
 
 
-folder = "data/wordLevelNGrams/nGramTables/"
+folder = "wordLevelNGrams/nGramTables/"
 train_data = pd.read_csv(folder+ 'wordLevelAbsolutBiGramTable.csv', sep='\t') #readBigramTable
 usefullUnigrams = [".",")","!","@","#","+","-","*","'",":",";","^",">","<","|","(","\"","[","]","…","☆","♡","&","“",",","$","","_","ə","ɛ","ʌ","ʃ",
 "á", "é", "í", "ó", "ú","ü","ñ", "¿",
 "1","2","3","4","5","6","7","8","9","0",
-"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
-"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 bigrams =[]
 for i in range(len(usefullUnigrams)):
     for j in range(len(usefullUnigrams)):
@@ -100,12 +99,13 @@ lr.fit(X_train, y_train)
 
 
 ###Evaluate Linear Regression###
-test_data = pd.read_csv('data/data.tsv', sep='\t')
+test_data = pd.read_csv('../data/data.tsv', sep='\t')
 taggedLanguages = list(test_data[len(test_data["taggedLanguages"])-5000:]["taggedLanguages"])
 taggedLanguages = [i.split(" ") for i in taggedLanguages]
 words = list(test_data[len(test_data["taggedLanguages"])-5000:]["tweetWordArray"])
 words =[i.split(" ") for i in words]
-
+for i in range(len(words)):
+    words[i] = [j.lower() for j in words[i]]#ONLY LOWER CASE WORDS!!!!
 
 #####Evaluate all words############
 f = open("Results/LR_AllWords.csv","w")
