@@ -5,14 +5,18 @@ import numpy as np
 import sys
 reload(sys)  # Reload does the trick!
 sys.setdefaultencoding('utf-8')
-
+smallSimulation = False
 #ReadAllFiles
 tweets = pd.read_csv('../../../data/data.tsv', sep='\t', encoding='utf-8')
 usefullUnigrams = [".",")","!","@","#","+","-","*","'",":",";","^",">","<","|","(","\"","[","]","…","☆","♡","&","“",",","$","","_","ə","ɛ","ʌ","ʃ",
 "á", "é", "í", "ó", "ú","ü","ñ", "¿",
 "1","2","3","4","5","6","7","8","9","0",
-"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"
+"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
+
 ]
+if smallSimulation == False:
+    print ("nice")
+    usefullUnigrams = usefullUnigrams + ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 bigrams =[]
 for i in range(len(usefullUnigrams)):
     for j in range(len(usefullUnigrams)):
@@ -39,7 +43,8 @@ for s in tweetsArray:
     wordSet = wordSet | set(s)
 wordList = list(wordSet)
 wordList.remove("")
-wordList = [i.lower() for i in wordList]
+if smallSimulation == False:
+	wordList = [i.lower() for i in wordList]
 
 
 def findLanguage(word):

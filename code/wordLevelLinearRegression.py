@@ -104,8 +104,8 @@ taggedLanguages = list(test_data[len(test_data["taggedLanguages"])-5000:]["tagge
 taggedLanguages = [i.split(" ") for i in taggedLanguages]
 words = list(test_data[len(test_data["taggedLanguages"])-5000:]["tweetWordArray"])
 words =[i.split(" ") for i in words]
-for i in range(len(words)):
-    words[i] = [j.lower() for j in words[i]]#ONLY LOWER CASE WORDS!!!!
+#for i in range(len(words)):
+ #   words[i] = [j.lower() for j in words[i]]#ONLY LOWER CASE WORDS!!!!
 
 #####Evaluate all words############
 f = open("Results/LR_AllWords.csv","w")
