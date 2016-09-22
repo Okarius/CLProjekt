@@ -1,0 +1,14 @@
+allWords: 69960
+allWrongLabelledWords: 22771
+allOthers: 11051
+allNe: 1197
+allMixed: 23
+allAmbiguous: 169
+allLanguages: 52520
+AccuracyOther: 0.336802099358
+AccuracyNe: 0.0593149540518
+AccuracyMixed: 0.217391304348
+AccuracyAmbiguous: 0.0532544378698
+AccuracyLanguages : 0.826009139375
+AccuracySpanish : 0.730837462531
+AccuracyEnglish : 0.869018328588
