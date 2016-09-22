@@ -28,10 +28,14 @@ for i in range(len(letters)):
         bigrams.append(letters[i]+letters[j])
         
         
-spanishTrigrams=["que","ent","nte","con","est","ado","par","los","era",
-                 "ien","men","per","sta","ara","una","por"]
+#spanishTrigrams=["que","ent","nte","con","est","ado","par","los","era",
+#                 "ien","men","per","sta","ara","una","por"]
+#englishTrigrams=["the","and","tha","ent","ing","ion","tio","for","nde",
+#                 "has","nce","edt","tis","oft","sth","men"]
 
-englishTrigrams=["the","and","tha","ent","ing","ion","tio","for","nde",
+spanishTrigrams=["que","nte","con","est","ado","par","los","era",
+                 "ien","per","sta","ara","una","por"]
+englishTrigrams=["the","and","tha","ing","ion","tio","for","nde",
                  "has","nce","edt","tis","oft","sth","men"]
 
 multigrams = unigrams + letters + bigrams + spanishTrigrams + englishTrigrams
@@ -89,6 +93,6 @@ data = []
 for word in wordList:
     data.append([word] + hasUniGramDic[word] + [findLanguage(word)])
 table= pd.DataFrame(data=data, columns=colomns)    
-table.to_csv("../data/wordLevelAbsolutMultiGramTable.csv", sep='\t')
+table.to_csv("../data/multigram_wl_abs.csv", sep='\t', index=False)
 
 
