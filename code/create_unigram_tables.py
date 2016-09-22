@@ -1,16 +1,21 @@
 import pandas as pd
 import numpy as np
 import sys
-reload(sys)  # Reload does the trick!
-sys.setdefaultencoding('utf-8')
+#reload(sys)  # Reload does the trick!
+#sys.setdefaultencoding('utf-8')
     
 #ReadAllFiles
-tweets = pd.read_csv('../../data.tsv', sep='\t', encoding='utf-8')
-f = open("../unigramsWordLevel.txt","r")
-unigrams = f.readlines()
-unigrams =[i.replace("\n","") for i in unigrams]
-f.close()
+tweets = pd.read_csv('../data/data1.tsv', sep='\t', encoding='utf-8')
+# f = open("../data/unigramsWordLevel.txt","r")
+# unigrams = f.readlines()
+# unigrams =[i.replace("\n","") for i in unigrams]
+# f.close()
 
+unigrams = ["á", "é", "í", "ó", "ú","ü","ñ", "¿",
+"1","2","3","4","5","6","7","8","9","0",
+"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
+"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
+]
 
 
 #GetListsWithContent
@@ -66,7 +71,7 @@ data = []
 for word in wordList:
     data.append([word] + hasUniGramDic[word] + [findLanguage(word)])
 table= pd.DataFrame(data=data, columns=colomns)    
-table.to_csv("wordLevelAbsolutUnigramTable.csv", sep='\t')
+table.to_csv("wordLevelAbsoluteUnigramTable-testing.csv", sep='\t')
 
 
 
@@ -88,4 +93,4 @@ data = []
 for word in wordList:
     data.append([word] + hasUniGramDic[word] + [findLanguage(word)])
 table= pd.DataFrame(data=data, columns=colomns)    
-table.to_csv("wordLevelRelativeUnigramTable.csv", sep='\t')
+table.to_csv("wordLevelRelativeUnigramTable-testing.csv", sep='\t')

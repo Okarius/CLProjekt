@@ -3,11 +3,11 @@
 import pandas as pd
 import numpy as np
 import sys
-reload(sys)  # Reload does the trick!
-sys.setdefaultencoding('utf-8')
+#reload(sys)  # Reload does the trick!
+#sys.setdefaultencoding('utf-8')
 
 #ReadAllFiles
-tweets = pd.read_csv('../../data.tsv', sep='\t', encoding='utf-8')
+tweets = pd.read_csv('../data/data1.tsv', sep='\t', encoding='utf-8')
 usefullUnigrams = [".",")","!","@","#","+","-","*","'",":",";","^",">","<","|","(","\"","[","]","…","☆","♡","&","“",",","$","","_","ə","ɛ","ʌ","ʃ",
 "á", "é", "í", "ó", "ú","ü","ñ", "¿",
 "1","2","3","4","5","6","7","8","9","0",
@@ -72,7 +72,7 @@ data = []
 for word in wordList:
     data.append([word] + hasUniGramDic[word] + [findLanguage(word)])
 table= pd.DataFrame(data=data, columns=colomns)    
-table.to_csv("wordLevelAbsolutBiGramTable.csv", sep='\t')
+table.to_csv("wordLevelAbsoluteBigramTable1.csv", sep='\t')
 
 
 
@@ -94,4 +94,4 @@ data = []
 for word in wordList:
     data.append([word] + hasUniGramDic[word] + [findLanguage(word)])
 table= pd.DataFrame(data=data, columns=colomns)    
-table.to_csv("wordLevelRelativeBiGramTable.csv", sep='\t')
+table.to_csv("wordLevelRelativeBigramTable1.csv", sep='\t')

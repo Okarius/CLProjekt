@@ -13,7 +13,7 @@ sys.setdefaultencoding('utf-8')
 def elementToArray(element):
     return element.split(" ")
 
-table = pd.read_csv("data/data.tsv", sep='\t')
+table = pd.read_csv("../data/data.tsv", sep='\t')
 languages = [i.split(" ") for i in table["taggedLanguages"]]
 languages = [i for i in languages if len(i)> 4]
 surrounding = []
