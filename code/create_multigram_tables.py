@@ -15,7 +15,7 @@ tweets = pd.read_csv('../data/data.tsv', sep='\t', encoding='utf-8')
 
 # features definitions
 unigrams= [".",")","!","@","#","+","-","*","'",":",";","^",">","<","|","(",
-          "\"","[","]","…","☆","♡","&","“",",","$","","_","ə","ɛ","ʌ","ʃ",
+          "[","]","…","☆","♡","&","“",",","$","","ə","ɛ","ʌ","ʃ",
           "á", "é", "í", "ó", "ú","ü","ñ", "¿",
           "1","2","3","4","5","6","7","8","9","0"]
 
@@ -36,19 +36,16 @@ for i in range(len(letters)):
 spanishTrigrams=["que","nte","con","est","ado","par","los","era",
                  "ien","per","sta","ara","una","por"]
 englishTrigrams=["the","and","tha","ing","ion","tio","for","nde",
-                 "has","nce","edt","tis","oft","sth","men"]
+                 "has","nce","edt","tis","oft","sth"]
 
 multigrams = unigrams + letters + bigrams + spanishTrigrams + englishTrigrams
 
 
 #GetListsWithContent
-tweetsString =[] 
-for s in tweets["tweetString"]:
-    tweetsString.append(s)
     
 tweetsArray =[] 
 for s in tweets["tweetWordArray"]:
-    tweetsArray.append(s.split(" "))
+    tweetsArray.append(s.lower().split(" "))
     
 languageArray =[] 
 for s in tweets["taggedLanguages"]:
@@ -61,19 +58,21 @@ for s in tweetsArray:
     wordSet = wordSet | set(s)
 wordList = list(wordSet)
 wordList.remove("")
-wordList = [i.lower() for i in wordList]
+
+#wordList = [i.lower() for i in wordList]
 
 def findLanguage(word):
     for i in range(len(tweetsArray)):
         if word in tweetsArray[i]: 
             return languageArray[i][tweetsArray[i].index(word)]
-    return 1
+    return "err"
 
 #get Language of words
 languages = []
 for word in wordList:
-    languages.append(findLanguage(word))
-    
+    lang=findLanguage(word)
+    print(word+"\t"+lang)
+    languages.append(lang)
     
     
 #check if unigram in word.  
@@ -88,7 +87,9 @@ for word in wordList:
     hasUniGramDic[word] = multigramsList
 
 #build table
-colomns=["word"] + multigrams + ["label"]
+#colomns=["word"] + multigrams + ["label"]
+
+colomns=["word"] + multigrams + ["c#label"] #input format for orange data mining
 data = []
 for word in wordList:
     data.append([word] + hasUniGramDic[word] + [findLanguage(word)])
