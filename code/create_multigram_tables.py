@@ -14,13 +14,13 @@ tweets = pd.read_csv('../data/data.tsv', sep='\t', encoding='utf-8')
 
 
 # features definitions
-unigrams= [".",")","!","@","#","+","-","*","'",":",";","^",">","<","|","(",
-          "[","]","…","☆","♡","&","“",",","$","","ə","ɛ","ʌ","ʃ",
-          "á", "é", "í", "ó", "ú","ü","ñ", "¿",
+unigrams= [".",")","!","@","#","+","-","*","'",":",";","^",">","<","|","(","\"",
+          "[","]","…","☆","♡","&","“",",","$","ə","ɛ","ʌ","ʃ", "¿",
           "1","2","3","4","5","6","7","8","9","0"]
 
 letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m",
-                   "n","o","p","q","r","s","t","u","v","w","x","y","z"]
+           "n","o","p","q","r","s","t","u","v","w","x","y","z",
+           "á", "é", "í", "ó", "ú","ü","ñ"]
 
 bigrams =[]
 for i in range(len(letters)):
@@ -71,7 +71,7 @@ def findLanguage(word):
 languages = []
 for word in wordList:
     lang=findLanguage(word)
-    print(word+"\t"+lang)
+    #print(word+"\t"+lang)
     languages.append(lang)
     
     
@@ -88,12 +88,11 @@ for word in wordList:
 
 #build table
 #colomns=["word"] + multigrams + ["label"]
-
 colomns=["word"] + multigrams + ["c#label"] #input format for orange data mining
+
 data = []
 for word in wordList:
     data.append([word] + hasUniGramDic[word] + [findLanguage(word)])
-table= pd.DataFrame(data=data, columns=colomns)    
+table= pd.DataFrame(data=data, columns=colomns)   
+
 table.to_csv("../data/multigram_wl_abs.csv", sep='\t', index=False)
-
-

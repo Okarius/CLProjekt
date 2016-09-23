@@ -1,0 +1,162 @@
+<head>
+    <meta charset="utf-8">
+    <title>Orange Report</title>
+
+    <style>
+    html, body, table {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        margin:0px;
+        padding:0;
+        border:0 none;
+    }
+
+    h1, h2 , h3, h4, h5 {
+       padding: 1px;
+       font-size:100%;
+    }
+
+    h1 {
+        color: white;
+        background-color: black;
+        padding: 4px;
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        border-bottom: 1px solid black;
+        padding-left: 2px;
+    }
+
+    ul, table, p {
+        padding: 10px;
+    }
+
+    table {
+        margin-left: -6px;
+    }
+
+    span.timestamp {
+        position: absolute;
+        right: 40px;
+        color:#ddd;
+    }
+
+    div.selected, div.normal {
+        margin: 5px;
+    }
+
+    div.selected {
+        background: #ddd;
+    }
+    @media print{
+        div.selected {
+            background: inherit;
+        }
+        ::-webkit-input-placeholder {
+            color: transparent;
+        }
+    }
+
+    div.content {
+        margin-left: 15px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 2px 6px 2px 6px;
+    }
+
+    @media screen {
+        td, th {
+            white-space: nowrap;
+        }
+    }
+
+    .caption {
+        text-align: center;
+        font-size: 90%;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        max-height: 20cm;
+    }
+
+    span.legend-square {
+        width: 1em;
+        height: 1em;
+        margin-right: 6px;
+        display: inline-block;
+    }
+
+    span.legend-item {
+        margin-right: 24px;
+    }
+
+    textarea {
+        border: none;
+        font-style: italic;
+        width: 100%;
+        height: 4em;
+    }
+
+    .textwrapper {
+        padding: 15px;
+    }
+
+    div.normal textarea:invalid {
+        display: none;
+    }
+
+    div.selected textarea {
+        display: block;
+    }
+
+    @media print{
+        section.section, img {
+            page-break-inside: avoid;
+        }
+    }
+    </style>
+
+
+</head><body>
+
+ 
+
+<div id="139676977714952" class="selected" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Test &amp; Score <span class="timestamp">Fr Sep 23 16, 13:49:43</span></h1><div class="content">
+<h2>Settings</h2><ul><b>Sampling type:</b> Stratified 10-fold Cross validation<br><b>Target class:</b> Average over classes<br></ul><h2>Scores</h2><table>
+<tbody><tr><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Method</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">AUC</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">CA</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">F1</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Precision</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Recall</th></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Logistic Regression</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.762</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.732</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.706</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.708</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.732</td></tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div><div id="139677006465640" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Test &amp; Score <span class="timestamp">Fr Sep 23 16, 13:49:59</span></h1><div class="content">
+<h2>Settings</h2><ul><b>Sampling type:</b> Stratified 10-fold Cross validation<br><b>Target class:</b> lang1<br></ul><h2>Scores</h2><table>
+<tbody><tr><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Method</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">AUC</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">CA</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">F1</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Precision</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Recall</th></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Logistic Regression</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.790</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.784</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.778</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.722</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.843</td></tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div><div id="139676977715096" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Test &amp; Score <span class="timestamp">Fr Sep 23 16, 13:50:02</span></h1><div class="content">
+<h2>Settings</h2><ul><b>Sampling type:</b> Stratified 10-fold Cross validation<br><b>Target class:</b> lang2<br></ul><h2>Scores</h2><table>
+<tbody><tr><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Method</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">AUC</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">CA</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">F1</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Precision</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Recall</th></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Logistic Regression</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.829</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.832</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.787</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.757</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.818</td></tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div><div id="139676977714520" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Test &amp; Score <span class="timestamp">Fr Sep 23 16, 13:50:04</span></h1><div class="content">
+<h2>Settings</h2><ul><b>Sampling type:</b> Stratified 10-fold Cross validation<br><b>Target class:</b> ne<br></ul><h2>Scores</h2><table>
+<tbody><tr><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Method</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">AUC</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">CA</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">F1</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Precision</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Recall</th></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Logistic Regression</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.531</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.918</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.122</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.309</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.076</td></tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div><div id="139678497153384" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Test &amp; Score <span class="timestamp">Fr Sep 23 16, 13:50:06</span></h1><div class="content">
+<h2>Settings</h2><ul><b>Sampling type:</b> Stratified 10-fold Cross validation<br><b>Target class:</b> other<br></ul><h2>Scores</h2><table>
+<tbody><tr><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Method</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">AUC</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">CA</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">F1</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Precision</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Recall</th></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Logistic Regression</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.701</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.936</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.543</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.799</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.412</td></tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div><div id="139678497153672" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Test &amp; Score <span class="timestamp">Fr Sep 23 16, 13:50:08</span></h1><div class="content">
+<h2>Settings</h2><ul><b>Sampling type:</b> Stratified 10-fold Cross validation<br><b>Target class:</b> ambiguous<br></ul><h2>Scores</h2><table>
+<tbody><tr><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Method</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">AUC</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">CA</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">F1</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Precision</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Recall</th></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Logistic Regression</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.499</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.995</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.000</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.000</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.000</td></tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div><div id="139678497154104" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Test &amp; Score <span class="timestamp">Fr Sep 23 16, 13:50:10</span></h1><div class="content">
+<h2>Settings</h2><ul><b>Sampling type:</b> Stratified 10-fold Cross validation<br><b>Target class:</b> mixed<br></ul><h2>Scores</h2><table>
+<tbody><tr><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Method</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">AUC</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">CA</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">F1</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Precision</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Recall</th></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Logistic Regression</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.500</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.998</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.000</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.000</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.000</td></tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div><div id="139678497155544" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Confusion Matrix <span class="timestamp">Fr Sep 23 16, 13:50:19</span></h1><div class="content">
+<h2>Confusion matrix for Logistic Regression (showing number of instances)</h2><table>
+<tbody><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:center;vertical-align:middle;">Predicted</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">lang1</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">lang2</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">ne</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">other</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">ambiguous</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">mixed</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">∑</td></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:center;vertical-align:bottom;">Actual</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">lang1</td><td style="color:black;border:0;background:#cecef4;font-weight:normal;text-align:right;vertical-align:middle;">4250</td><td style="color:black;border:0;background:#f5d2d2;font-weight:normal;text-align:right;vertical-align:middle;">651</td><td style="color:black;border:0;background:#fef9f9;font-weight:normal;text-align:right;vertical-align:middle;">74</td><td style="color:black;border:0;background:#fefbfb;font-weight:normal;text-align:right;vertical-align:middle;">61</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">7</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">1</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">5044</td></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">lang2</td><td style="color:black;border:0;background:#f4cece;font-weight:normal;text-align:right;vertical-align:middle;">710</td><td style="color:black;border:0;background:#d7d7f6;font-weight:normal;text-align:right;vertical-align:middle;">3489</td><td style="color:black;border:0;background:#fffcfc;font-weight:normal;text-align:right;vertical-align:middle;">34</td><td style="color:black;border:0;background:#fffcfc;font-weight:normal;text-align:right;vertical-align:middle;">26</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">3</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">1</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">4263</td></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">ne</td><td style="color:black;border:0;background:#f8dfdf;font-weight:normal;text-align:right;vertical-align:middle;">469</td><td style="color:black;border:0;background:#fbeaea;font-weight:normal;text-align:right;vertical-align:middle;">291</td><td style="color:black;border:0;background:#fefeff;font-weight:normal;text-align:right;vertical-align:middle;">64</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">19</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">2</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">1</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">846</td></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">other</td><td style="color:black;border:0;background:#f8e0e0;font-weight:normal;text-align:right;vertical-align:middle;">428</td><td style="color:black;border:0;background:#fdf4f4;font-weight:normal;text-align:right;vertical-align:middle;">152</td><td style="color:black;border:0;background:#fffcfc;font-weight:normal;text-align:right;vertical-align:middle;">32</td><td style="color:black;border:0;background:#f9f9fe;font-weight:normal;text-align:right;vertical-align:middle;">429</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">1</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:right;vertical-align:middle;">0</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">1042</td></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">ambiguous</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">19</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">15</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">2</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">2</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:right;vertical-align:middle;">0</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:right;vertical-align:middle;">0</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">38</td></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">mixed</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">10</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">9</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">1</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:right;vertical-align:middle;">0</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:right;vertical-align:middle;">0</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:right;vertical-align:middle;">0</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">20</td></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">∑</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">5886</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">4607</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">207</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">537</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">13</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">3</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">11253</td></tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div></body>

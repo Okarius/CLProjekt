@@ -8,11 +8,11 @@ import sys
 #sys.setdefaultencoding('utf-8')
 
 #ReadAllFiles
-tweets = pd.read_csv('../data/data1.tsv', sep='\t', encoding='utf-8')
+tweets = pd.read_csv('../data/data.tsv', sep='\t', encoding='utf-8')
 
 
-smallSimulation = False
-
+smallSimulation = True
+useOrange = True
 
 usefullUnigrams = [".",")","!","@","#","+","-","*","'",":",";","^",">","<","|","(","\"","[","]","…","☆","♡","&","“",",","$","","_","ə","ɛ","ʌ","ʃ",
 "á", "é", "í", "ó", "ú","ü","ñ", "¿",
@@ -78,31 +78,36 @@ for word in wordList:
     hasUniGramDic[word] = bigramList
 
 #buildTable
-colomns=["word"] + bigrams + ["label"]
+if useOrange == True:
+    bigrams=["D#"+b for b in bigrams]
+    colomns=["m#word"] + bigrams + ["c#label"]
+else:
+    colomns=["word"] + bigrams + ["label"]
+
+    
 data = []
 for word in wordList:
     data.append([word] + hasUniGramDic[word] + [findLanguage(word)])
 table= pd.DataFrame(data=data, columns=colomns)    
-table.to_csv("wordLevelAbsoluteBigramTable1.csv", sep='\t')
+table.to_csv("bigram_wl_abs.csv", sep='\t', index=False)
 
 
+##build table for relativUnigrams
+#hasUniGramDic = {}
+#for word in wordList:
+    #unigramList = []
+    #for bi in bigrams:
+        #if bi in word:
+            #unigramList.append(1/len(word))
+        #else:
+            #unigramList.append(0)
+    #hasUniGramDic[word] = unigramList
 
-#build table for relativUnigrams
-hasUniGramDic = {}
-for word in wordList:
-    unigramList = []
-    for bi in bigrams:
-        if bi in word:
-            unigramList.append(1/len(word))
-        else:
-            unigramList.append(0)
-    hasUniGramDic[word] = unigramList
 
-
-#buildTable
-colomns=["word"] + bigrams + ["label"]
-data = []
-for word in wordList:
-    data.append([word] + hasUniGramDic[word] + [findLanguage(word)])
-table= pd.DataFrame(data=data, columns=colomns)    
-table.to_csv("wordLevelRelativeBigramTable1.csv", sep='\t')
+##buildTable
+#colomns=["word"] + bigrams + ["label"]
+#data = []
+#for word in wordList:
+    #data.append([word] + hasUniGramDic[word] + [findLanguage(word)])
+#table= pd.DataFrame(data=data, columns=colomns)    
+#table.to_csv("wordLevelRelativeBigramTable1.csv", sep='\t')
