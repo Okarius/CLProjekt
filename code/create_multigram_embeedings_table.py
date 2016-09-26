@@ -23,6 +23,8 @@ letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m",
            "n","o","p","q","r","s","t","u","v","w","x","y","z",
            "á", "é", "í", "ó", "ú","ü","ñ"]
 
+capLetters = [i.upper() for i in letters]
+
 bigrams =[]
 for i in range(len(letters)):
     for j in range(len(letters)):
@@ -40,30 +42,22 @@ englishTrigrams=["the","and","tha","ing","ion","tio","for","nde",
                  "has","nce","edt","tis","oft","sth"]
 
 multigrams = unigrams + letters + bigrams + spanishTrigrams + englishTrigrams
-
     
 wordList =[] #all words
 tweetLength = [] #lengths
 
 for s in tweets["tweetWordArray"]:
-    tweetWords = re.split(" +",s.lower().strip())
+    #tweetWords = re.split(" +",s.lower().strip())
+    tweetWords = re.split(" +",s.strip())
     wordList.extend(tweetWords)
     tweetLength.append(len(tweetWords))
     
-        
 languageList =[] 
 for s in tweets["taggedLanguages"]:
     languageList.extend(re.split(" +",s.strip()))
     
-    
-#def findLanguage(word):
-    #for i in range(len(wordList)):
-        #if word in wordList[i]: 
-            #return languageList[i][wordList[i].index(word)]
-    #return "err"
 
-
-#get Language of words
+#get language of words
 languagesDict = {}
 pos = 0
 for i in range(len(tweets)):
@@ -91,24 +85,26 @@ for i in range(len(tweets)):
         languagesDict[word] = langs
         pos = pos + 1
     
-#print(languagesDict['bambino'])
+  
 
-    
-
-
-#check if unigram in word.  
+#check if ngram is present in word  
 multigramsDict = {}
 for word in wordList:
     multigramsList = []
-    for bi in multigrams:
-        if bi in word:
+    for mg in multigrams:
+        if mg in word.lower():
+            multigramsList.append(1)
+        else:
+            multigramsList.append(0)
+    for l in capLetters:
+        if l in word:
             multigramsList.append(1)
         else:
             multigramsList.append(0)
     multigramsDict[word] = multigramsList
 
 #build table
-colomns=["word"] + multigrams + ["D#tLen"] + ["D#prev"] + ["D#next"] + ["c#label"]
+colomns=["word"] + multigrams + capLetters + ["D#tLen"] + ["D#prev"] + ["D#next"] + ["c#label"]
 
 data = []
 for word in wordList:
