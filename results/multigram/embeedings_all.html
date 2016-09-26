@@ -1,0 +1,171 @@
+<head>
+    <meta charset="utf-8">
+    <title>Orange Report</title>
+
+    <style>
+    html, body, table {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        margin:0px;
+        padding:0;
+        border:0 none;
+    }
+
+    h1, h2 , h3, h4, h5 {
+       padding: 1px;
+       font-size:100%;
+    }
+
+    h1 {
+        color: white;
+        background-color: black;
+        padding: 4px;
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        border-bottom: 1px solid black;
+        padding-left: 2px;
+    }
+
+    ul, table, p {
+        padding: 10px;
+    }
+
+    table {
+        margin-left: -6px;
+    }
+
+    span.timestamp {
+        position: absolute;
+        right: 40px;
+        color:#ddd;
+    }
+
+    div.selected, div.normal {
+        margin: 5px;
+    }
+
+    div.selected {
+        background: #ddd;
+    }
+    @media print{
+        div.selected {
+            background: inherit;
+        }
+        ::-webkit-input-placeholder {
+            color: transparent;
+        }
+    }
+
+    div.content {
+        margin-left: 15px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 2px 6px 2px 6px;
+    }
+
+    @media screen {
+        td, th {
+            white-space: nowrap;
+        }
+    }
+
+    .caption {
+        text-align: center;
+        font-size: 90%;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        max-height: 20cm;
+    }
+
+    span.legend-square {
+        width: 1em;
+        height: 1em;
+        margin-right: 6px;
+        display: inline-block;
+    }
+
+    span.legend-item {
+        margin-right: 24px;
+    }
+
+    textarea {
+        border: none;
+        font-style: italic;
+        width: 100%;
+        height: 4em;
+    }
+
+    .textwrapper {
+        padding: 15px;
+    }
+
+    div.normal textarea:invalid {
+        display: none;
+    }
+
+    div.selected textarea {
+        display: block;
+    }
+
+    @media print{
+        section.section, img {
+            page-break-inside: avoid;
+        }
+    }
+    </style>
+
+
+</head><body>
+
+ 
+
+<div id="140425861397528" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>File <span class="timestamp">Mo Sep 26 16, 16:55:24</span></h1><div class="content">
+<h2>File</h2><ul><b>File name:</b> <br><b>Format:</b> unknown<br></ul><h2>Data</h2><ul><b>Data instances:</b> 71259<br><b>Features:</b> ., ), !, @, Feature 1, +, -, *, ', :, ;, ^, &gt;, &lt;, |, (, ", [, ], …, ☆, ♡, &amp;, “, ,, $, ə, ɛ, ʌ, ʃ, ¿, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, á, é, í, ó, ú, ü, ñ, aa, ab, ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, an, ao, ap, aq, ar, as, at, au, av, aw, ax, ay, az, aá, aé, aí, aó, aú, aü, añ, ba, bb, bc, bd, be, bf, bg, bh, bi, bj, bk, bl, bm, bn, bo, bp, bq, br, bs, bt, bu, bv, bw, bx, by, bz, bá, bé, bí, bó, bú, bü, bñ, ca, cb, cc, cd, ce, cf, cg, ch, ci, cj, ck, cl, cm, cn, co, cp, cq, cr, cs, ct, cu, cv, cw, cx, cy, cz, cá, cé, cí, có, cú, cü, cñ, da, db, dc, dd, de, df, dg, dh, di, dj, dk, dl, dm, dn, do, dp, dq, dr, ds, dt, du, dv, dw, dx, dy, dz, dá, dé, dí, dó, dú, dü, dñ, ea, eb, ec, ed, ee, ef, eg, eh, ei, ej, ek, el, em, en, eo, ep, eq, er, es, et, eu, ev, ew, ex, ey, ez, eá, eé, eí, eó, eú, eü, eñ, fa, fb, fc, fd, fe, ff, fg, fh, fi, fj, fk, fl, fm, fn, fo, fp, fq, fr, fs, ft, fu, fv, fw, fx, fy, fz, ...  (total: 1227 features)<br><b>Meta attributes:</b> word<br><b>Target:</b> label<br></ul></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div><div id="140426307134088" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Select Rows <span class="timestamp">Mo Sep 26 16, 17:02:05</span></h1><div class="content">
+<h2>Data</h2><ul><b>Data instances:</b> 71259<br><b>Features:</b> 1227<br><b>Meta attributes:</b> 1<br><b>Target:</b> Class 'label'<br><b>Condition:</b> no conditions<br></ul><h2>Matching data</h2><ul><b>Data instances:</b> 71259<br><b>Features:</b> 824<br><b>Meta attributes:</b> 1<br><b>Target:</b> Class 'label'<br></ul><h2>Non-matching data</h2><ul></ul></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)">remove unused features</textarea></div></div><div id="140426307133656" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Logistic Regression <span class="timestamp">Mo Sep 26 16, 17:02:33</span></h1><div class="content">
+<ul><b>Name:</b> Logistic Regression<br></ul><h2>Model parameters</h2><ul><b>Regularization:</b> Ridge (L2), C=5<br></ul></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div><div id="140426307135096" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Test &amp; Score <span class="timestamp">Mo Sep 26 16, 17:02:39</span></h1><div class="content">
+<h2>Settings</h2><ul><b>Sampling type:</b> Stratified 10-fold Cross validation<br><b>Target class:</b> Average over classes<br></ul><h2>Scores</h2><table>
+<tbody><tr><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Method</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">AUC</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">CA</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">F1</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Precision</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Recall</th></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Logistic Regression</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.970</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.969</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.966</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.966</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.969</td></tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div><div id="140426307134664" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Test &amp; Score <span class="timestamp">Mo Sep 26 16, 17:02:42</span></h1><div class="content">
+<h2>Settings</h2><ul><b>Sampling type:</b> Stratified 10-fold Cross validation<br><b>Target class:</b> ambiguous<br></ul><h2>Scores</h2><table>
+<tbody><tr><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Method</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">AUC</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">CA</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">F1</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Precision</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Recall</th></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Logistic Regression</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.792</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.999</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.670</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.787</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.583</td></tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div><div id="140426307108728" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Test &amp; Score <span class="timestamp">Mo Sep 26 16, 17:02:44</span></h1><div class="content">
+<h2>Settings</h2><ul><b>Sampling type:</b> Stratified 10-fold Cross validation<br><b>Target class:</b> lang1<br></ul><h2>Scores</h2><table>
+<tbody><tr><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Method</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">AUC</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">CA</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">F1</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Precision</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Recall</th></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Logistic Regression</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.976</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.977</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.979</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.971</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.987</td></tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div><div id="140426307108584" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Test &amp; Score <span class="timestamp">Mo Sep 26 16, 17:02:47</span></h1><div class="content">
+<h2>Settings</h2><ul><b>Sampling type:</b> Stratified 10-fold Cross validation<br><b>Target class:</b> lang2<br></ul><h2>Scores</h2><table>
+<tbody><tr><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Method</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">AUC</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">CA</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">F1</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Precision</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Recall</th></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Logistic Regression</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.982</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.984</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.971</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.965</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.976</td></tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div><div id="140426307105992" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Test &amp; Score <span class="timestamp">Mo Sep 26 16, 17:02:49</span></h1><div class="content">
+<h2>Settings</h2><ul><b>Sampling type:</b> Stratified 10-fold Cross validation<br><b>Target class:</b> mixed<br></ul><h2>Scores</h2><table>
+<tbody><tr><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Method</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">AUC</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">CA</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">F1</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Precision</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Recall</th></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Logistic Regression</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.568</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">1.000</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.240</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">1.000</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.136</td></tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div><div id="140426307096440" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Test &amp; Score <span class="timestamp">Mo Sep 26 16, 17:02:52</span></h1><div class="content">
+<h2>Settings</h2><ul><b>Sampling type:</b> Stratified 10-fold Cross validation<br><b>Target class:</b> ne<br></ul><h2>Scores</h2><table>
+<tbody><tr><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Method</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">AUC</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">CA</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">F1</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Precision</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Recall</th></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Logistic Regression</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.662</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.985</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.437</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.656</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.328</td></tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div><div id="140426361865992" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Test &amp; Score <span class="timestamp">Mo Sep 26 16, 17:02:55</span></h1><div class="content">
+<h2>Settings</h2><ul><b>Sampling type:</b> Stratified 10-fold Cross validation<br><b>Target class:</b> other<br></ul><h2>Scores</h2><table>
+<tbody><tr><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Method</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">AUC</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">CA</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">F1</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Precision</th><th style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Recall</th></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">Logistic Regression</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.985</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.993</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.979</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.986</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;">0.973</td></tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div><div id="140425861396088" class="selected" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Confusion Matrix <span class="timestamp">Mo Sep 26 16, 17:03:04</span></h1><div class="content">
+<h2>Confusion matrix for Logistic Regression (showing number of instances)</h2><table>
+<tbody><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:center;vertical-align:middle;">Predicted</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">ambiguous</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">lang1</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">lang2</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">mixed</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">ne</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">other</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">∑</td></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:center;vertical-align:bottom;">Actual</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">ambiguous</td><td style="color:black;border:0;background:#fefeff;font-weight:normal;text-align:right;vertical-align:middle;">70</td><td style="color:black;border:0;background:#fffcfc;font-weight:normal;text-align:right;vertical-align:middle;">18</td><td style="color:black;border:0;background:#fffcfc;font-weight:normal;text-align:right;vertical-align:middle;">21</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:right;vertical-align:middle;">0</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">1</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">10</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">120</td></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">lang1</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">7</td><td style="color:black;border:0;background:#cecef4;font-weight:normal;text-align:right;vertical-align:middle;">37388</td><td style="color:black;border:0;background:#fae5e5;font-weight:normal;text-align:right;vertical-align:middle;">275</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:right;vertical-align:middle;">0</td><td style="color:black;border:0;background:#fdf2f2;font-weight:normal;text-align:right;vertical-align:middle;">122</td><td style="color:black;border:0;background:#fdf6f6;font-weight:normal;text-align:right;vertical-align:middle;">94</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">37886</td></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">lang2</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">4</td><td style="color:black;border:0;background:#f8e0e0;font-weight:normal;text-align:right;vertical-align:middle;">321</td><td style="color:black;border:0;background:#e5e5fa;font-weight:normal;text-align:right;vertical-align:middle;">18720</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:right;vertical-align:middle;">0</td><td style="color:black;border:0;background:#fef7f7;font-weight:normal;text-align:right;vertical-align:middle;">80</td><td style="color:black;border:0;background:#fefbfb;font-weight:normal;text-align:right;vertical-align:middle;">48</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">19173</td></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">mixed</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">1</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">6</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">12</td><td style="color:black;border:0;background:#fefeff;font-weight:normal;text-align:right;vertical-align:middle;">3</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:right;vertical-align:middle;">0</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:right;vertical-align:middle;">0</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">22</td></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">ne</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">6</td><td style="color:black;border:0;background:#f4cece;font-weight:normal;text-align:right;vertical-align:middle;">521</td><td style="color:black;border:0;background:#f9e2e2;font-weight:normal;text-align:right;vertical-align:middle;">311</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:right;vertical-align:middle;">0</td><td style="color:black;border:0;background:#fefeff;font-weight:normal;text-align:right;vertical-align:middle;">422</td><td style="color:black;border:0;background:#fffcfc;font-weight:normal;text-align:right;vertical-align:middle;">27</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">1287</td></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">other</td><td style="color:black;border:0;background:#fffefe;font-weight:normal;text-align:right;vertical-align:middle;">1</td><td style="color:black;border:0;background:#fae5e5;font-weight:normal;text-align:right;vertical-align:middle;">266</td><td style="color:black;border:0;background:#fef9f9;font-weight:normal;text-align:right;vertical-align:middle;">57</td><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:right;vertical-align:middle;">0</td><td style="color:black;border:0;background:#fffcfc;font-weight:normal;text-align:right;vertical-align:middle;">18</td><td style="color:black;border:0;background:#efeffc;font-weight:normal;text-align:right;vertical-align:middle;">12429</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">12771</td></tr><tr><td style="color:black;border:0;background:transparent;font-weight:normal;text-align:left;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">∑</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">89</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">38520</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">19396</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">3</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">643</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">12608</td><td style="color:black;border:0;background:transparent;font-weight:bold;text-align:right;vertical-align:middle;">71259</td></tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea required="required" placeholder="Write a comment..." oninput="pybridge._add_comment(this.parentNode.parentNode.id, this.value)"></textarea></div></div></body>
