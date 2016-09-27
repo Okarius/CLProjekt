@@ -4,15 +4,15 @@ import pandas as pd
 import numpy as np
 import sys
 
-#reload(sys)  # Reload does the trick!
-#sys.setdefaultencoding('utf-8')
+reload(sys)  # Reload does the trick!
+sys.setdefaultencoding('utf-8')
 
 #ReadAllFiles
 tweets = pd.read_csv('../data/data.tsv', sep='\t', encoding='utf-8')
 
 
 smallSimulation = True
-useOrange = True
+useOrange = False
 
 usefullUnigrams = [".",")","!","@","#","+","-","*","'",":",";","^",">","<","|","(","\"","[","]","…","☆","♡","&","“",",","$","","_","ə","ɛ","ʌ","ʃ",
 "á", "é", "í", "ó", "ú","ü","ñ", "¿",
