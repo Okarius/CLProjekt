@@ -12,9 +12,12 @@ The project started as student term project in a Machine learning for computatio
 * Download the Spanish-English Training data (11,400 tweets) from http://emnlp2014.org/workshops/CodeSwitch/call.html.  These tab separated files contain the tagging (offset file) with the following coloums: `TweetID`, `UserID`, `Start`, `Stop` and `Language`
 
 * Download the tweeter feetching tool from http://emnlp2014.org/workshops/CodeSwitch/scripts/twitter.zip.
-** Usage: `python collect_tweets.py -i <inputFile.tsv> -o <outputFile.tsv>`
-** Using en_es_training_offsets.tsv as the input file, we get a "string file" with 3 columns: `TweetID`, `UserID`, and `Tweet`.
-** Now we have a file with the tweets (string file from the previous step) and another one with the language annotation for each word (offset file). Both contain the tweetID.
+
+* Usage: `python collect_tweets.py -i <inputFile.tsv> -o <outputFile.tsv>`
+
+* Using en_es_training_offsets.tsv as the input file, we get a "string file" with 3 columns: `TweetID`, `UserID`, and `Tweet`.
+
+* Now we have a file with the tweets (string file from the previous step) and another one with the language annotation for each word (offset file). Both contain the tweetID.
 
 ## Preprocessing
 After downloading the ofset file and the actual tweets, use our script `read_tweets.py` and set the variables at the top of the script:
